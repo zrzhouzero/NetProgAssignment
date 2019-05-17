@@ -8,8 +8,8 @@ public class ClientStrings {
         return "Connected to " + ip + ", port: " + port;
     }
 
-    public static String gameTerminated() {
-        return "Game Terminated!";
+    public static String gameOver() {
+        return "Game Over!";
     }
 
     public static String playAgain() {

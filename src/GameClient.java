@@ -101,7 +101,7 @@ public class GameClient extends Project {
             e.printStackTrace();
         } finally {
             try {
-                System.out.println(ClientStrings.gameTerminated());
+                System.out.println(ClientStrings.gameOver());
                 close();
             } catch (IOException e) {
                 e.printStackTrace();
