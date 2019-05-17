@@ -1,0 +1,8 @@
+Socket[addr=/192.168.0.61,port=50591,localport=61756] connected!	Sat May 18 01:47:57 AEST 2019 Sat May 18 01:47:57 AEST 2019
+Socket[addr=/192.168.0.61,port=50591,localport=61756] disconnected!	Sat May 18 01:47:57 AEST 2019 Sat May 18 01:47:57 AEST 2019
+Socket[addr=/192.168.0.61,port=50593,localport=61756] connected!	Sat May 18 01:48:07 AEST 2019 Sat May 18 01:48:07 AEST 2019
+Socket[addr=/192.168.0.61,port=50593,localport=61756] disconnected!	Sat May 18 01:48:07 AEST 2019 Sat May 18 01:48:07 AEST 2019
+Socket[addr=/192.168.0.61,port=50594,localport=61756] connected!	Sat May 18 01:48:17 AEST 2019 Sat May 18 01:48:17 AEST 2019
+Socket[addr=/192.168.0.61,port=50594,localport=61756] disconnected!	Sat May 18 01:48:17 AEST 2019 Sat May 18 01:48:17 AEST 2019
+Socket[addr=/192.168.0.61,port=50599,localport=61756] connected!	Sat May 18 01:48:44 AEST 2019 Sat May 18 01:48:44 AEST 2019
+Socket[addr=/192.168.0.61,port=50599,localport=61756] disconnected!	Sat May 18 01:48:44 AEST 2019 Sat May 18 01:48:44 AEST 2019
