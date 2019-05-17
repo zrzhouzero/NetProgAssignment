@@ -18,4 +18,8 @@ public class ClientStrings {
                 "others to continue.";
     }
 
+    public static String waiting() {
+        return "Please wait.";
+    }
+
 }

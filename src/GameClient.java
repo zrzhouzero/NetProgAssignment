@@ -33,6 +33,7 @@ public class GameClient extends Project {
             socket = new Socket(ip, PORT_NUMBER);
             System.out.println(ClientStrings.connectionEstablished(ip, String.valueOf(PORT_NUMBER)));
             System.out.println(socket);
+            System.out.println(ClientStrings.waiting());
 
             // initialise I/O streams
             in = new DataInputStream(socket.getInputStream());
