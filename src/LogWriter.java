@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
+/**
+ * A class to handle log writing.
+ */
 public class LogWriter {
 
     public static void writeGameLog(String str) {

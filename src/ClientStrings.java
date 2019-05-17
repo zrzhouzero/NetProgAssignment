@@ -1,3 +1,6 @@
+/**
+ * A class the store the client output string to support multi-language.
+ */
 public class ClientStrings {
 
     public static String inputIpAddress() {

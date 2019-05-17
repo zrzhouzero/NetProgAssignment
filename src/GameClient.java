@@ -16,6 +16,8 @@ public class GameClient extends Project {
             new GameClient();
             System.out.println(ClientStrings.playAgain());
             String ans = readFromConsole.nextLine();
+
+            // ask the player if to play again
             if (ans.toLowerCase().equals("q")) {
                 System.exit(0);
             }

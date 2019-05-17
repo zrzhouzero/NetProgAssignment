@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
+/**
+ * GameThread to handle game
+ */
 public class GameThread extends Thread {
 
     private Game game;
@@ -23,21 +26,25 @@ public class GameThread extends Thread {
 
     @Override
     public void run() {
+        // assign each player a thread for game
         for (Socket socket : players) {
             Runnable r = () -> startGame(socket);
             Thread t = new Thread(r);
             t.start();
             gameThreads.add(t);
         }
+
+        // before broadcasting the result, all the players should finish the game
         for (Thread t : gameThreads) {
             try {
-                // the game finish together
                 t.join();
             } catch (InterruptedException e) {
                 e.printStackTrace();
                 LogWriter.writeServerLog(t + " error!\t" + new Date());
             }
         }
+
+        // broadcast the result
         broadcastResults();
         System.out.println("End Game.");
     }

@@ -1,3 +1,6 @@
+/**
+ * A class to store the player's result.
+ */
 public class PlayerResult {
 
     private String playerName;

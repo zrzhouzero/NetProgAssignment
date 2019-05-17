@@ -1,3 +1,6 @@
+/**
+ * A class the store the server output string to support multi-language.
+ */
 public class ServerStrings {
 
     public static String gameStart() {

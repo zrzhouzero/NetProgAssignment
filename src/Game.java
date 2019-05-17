@@ -1,10 +1,14 @@
 import java.util.Random;
 
+/**
+ * Game class is to define all the parameters of the game.
+ */
 public class Game {
 
     private int targetNumber;
     private int maximumGuessCount;
 
+    private final static int MAX_NUMBER_OF_PLAYERS = 3;
     private final static int DEFAULT_MAXIMUM_GUESS = 4;
 
     public Game() {
@@ -36,5 +40,9 @@ public class Game {
 
     public static int getDefaultMaximumGuess() {
         return DEFAULT_MAXIMUM_GUESS;
+    }
+
+    public static int getMaxNumberOfPlayers() {
+        return MAX_NUMBER_OF_PLAYERS;
     }
 }

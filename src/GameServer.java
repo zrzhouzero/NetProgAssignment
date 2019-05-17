@@ -35,6 +35,8 @@ public class GameServer extends Project {
                 Socket socket = serverSocket.accept();
                 socketInfo = socket.toString();
                 LogWriter.writeServerLog(socketInfo + " connected!\t" + new Date());
+
+                // start a thread for game
                 Runnable r = () -> enqueue(socket);
                 new Thread(r).start();
                 LogWriter.writeServerLog(socketInfo + " disconnected!\t" + new Date());
@@ -46,6 +48,9 @@ public class GameServer extends Project {
     }
 
     private void enqueue(Socket socket) {
+        // put the client socket (player) into the queue
+        // if there is only one player, start a single player game
+        // if there are players in game, wait in the queue
         if (playersInGame.size() == 0 && playersInQueue.size() == 0) {
             playersInGame.add(socket);
             runGame();
@@ -55,7 +60,9 @@ public class GameServer extends Project {
     }
 
     private void runGame() {
-        if (playersInGame.size() == 3 || playersInQueue.size() == 0) {
+        // if there are enough players (3 in this case), start the game
+        // or if there are less than 3 players but there is no more players waiting in queue, start the game
+        if (playersInGame.size() == Game.getMaxNumberOfPlayers() || playersInQueue.size() == 0) {
             // start game
             Game game = new Game();
             new GameThread(playersInGame, game).run();
